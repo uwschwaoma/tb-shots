@@ -17,7 +17,7 @@ header {
 }
 
 header .logo img {
-  height: 50px;
+  height: 100px;
 }
 /* Header Dropdown Styles */
 nav ul li.dropdown {
