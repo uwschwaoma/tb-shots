@@ -74,16 +74,23 @@
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio-section">
-    <h2>Portfolio</h2>
-    <div id="cars" class="portfolio-gallery">
-      <h3>Cars</h3>
-      <div class="gallery">
-        <!-- Add car-related images and videos here -->
-        <img src="babybluebmw.jpg" alt="Car 1" 
-        <img src="frontofgreysubi.jpg" alt="Car 2" 
-      </div>
+ section id="portfolio" class="portfolio-section">
+  <h2>Portfolio</h2>
+  <div id="cars" class="portfolio-gallery">
+    <h3>Cars</h3>
+    <!-- Left arrow button -->
+    <button class="scroll-button left" onclick="scrollGallery(-1)">&#8249;</button>
+    
+    <div class="gallery">
+      <img src="babybluebmw.jpg" alt="Car 1" />
+      <img src="frontofgreysubi.jpg" alt="Car 2" />
+      <!-- Add more images as needed -->
     </div>
+    
+    <!-- Right arrow button -->
+    <button class="scroll-button right" onclick="scrollGallery(1)">&#8250;</button>
+  </div>
+</section>
     <div id="miscellaneous" class="portfolio-gallery">
       <h3>Miscellaneous</h3>
       <div class="gallery">
