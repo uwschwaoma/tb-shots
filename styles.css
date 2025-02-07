@@ -17,17 +17,6 @@ header {
   gap: 60px;
 }
 
-nav ul li a {
-  font-size: 35px; /* Make text larger */
-  font-weight: bold;
-  padding: 20px 40px; /* Increase clickable area */
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-  border-radius: 10px;
-  transition: 0.3s ease-in-out;
-}
-
 nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
