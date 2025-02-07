@@ -18,7 +18,7 @@ header {
 }
 
 header h1, header nav {
-  letter-spacing: 2px; /* Adjust as needed */
+  letter-spacing: 30px; /* Adjust as needed */
 }
 
 header .logo img {
