@@ -177,7 +177,7 @@ nav ul li a:hover {
 }
 
 .portfolio-gallery .gallery img {
-  width: 200px;
+  width: 800px;
   height: auto;
   border-radius: 10px; /* Rounded corners for images */
 }
