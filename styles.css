@@ -17,6 +17,10 @@ header {
   gap: 20px;
 }
 
+header h1, header nav {
+  letter-spacing: 2px; /* Adjust as needed */
+}
+
 header .logo img {
   height: 100px;
 }
