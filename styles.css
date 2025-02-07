@@ -10,10 +10,11 @@ body {
 /* Header Styles */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px 40px; /* Add more horizontal padding */
   background-color: #585858; /* Darker grey header */
+  gap: 20px
 }
 
 header .logo img {
