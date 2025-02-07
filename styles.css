@@ -1,0 +1,229 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; /* Dark grey background */
+  color: #ffffff; /* White text */
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px; /* Add more horizontal padding */
+  background-color: #333333; /* Darker grey header */
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Increase spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600; /* Semi-bold for header links */
+  font-size: 18px; /* Slightly larger font size */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+  color: #bb86fc; /* Purple hover effect */
+}
+
+/* Home Section */
+.home-section .background-image {
+  position: relative;
+  text-align: center;
+}
+
+.home-section .background-image img {
+  width: 100%;
+  height: auto;
+}
+
+.home-section .logo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-section .logo-overlay img {
+  height: 100px;
+}
+
+.home-section .best-work {
+  padding: 40px 20px; /* Add more padding */
+  text-align: center;
+}
+
+.home-section .best-work h2 {
+  font-size: 32px; /* Larger heading */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 20px;
+}
+
+.home-section .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-section .gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 40px 20px; /* Add more padding */
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 32px; /* Larger heading */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #bb86fc; /* Purple button */
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Larger font size */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333333;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px; /* Larger font size */
+}
+
+.dropdown-content a:hover {
+  background-color: #555555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.portfolio-gallery .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.portfolio-gallery .gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Booking Section */
+.booking-section {
+  padding: 40px 20px; /* Add more padding */
+  text-align: center;
+}
+
+.booking-section h2 {
+  font-size: 32px; /* Larger heading */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 20px;
+}
+
+.booking-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.booking-section form input,
+.booking-section form textarea {
+  padding: 10px;
+  border: 1px solid #bb86fc;
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.booking-section form button {
+  background-color: #bb86fc;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Larger font size */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.booking-section .contact-info {
+  margin-top: 20px;
+}
+
+/* About Me Section */
+.about-section {
+  padding: 40px 20px; /* Add more padding */
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 32px; /* Larger heading */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px; /* Larger font size */
+  line-height: 1.6; /* Better readability */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer Section */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #333333;
+}
+
+footer .social-media img {
+  height: 30px;
+}
+
+footer p {
+  font-size: 16px; /* Larger font size */
+  margin: 10px 0 0;
+}
