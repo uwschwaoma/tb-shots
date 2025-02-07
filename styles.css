@@ -13,7 +13,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px; /* Add more horizontal padding */
-  background-color: #333333; /* Darker grey header */
+  background-color: #A8A8A8; /* Darker grey header */
 }
 
 header .logo img {
