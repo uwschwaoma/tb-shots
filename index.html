@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -18,7 +18,13 @@
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
+        <li class="dropdown">
+          <a href="#portfolio">Portfolio</a>
+          <div class="dropdown-content">
+            <a href="#cars">Cars</a>
+            <a href="#miscellaneous">Miscellaneous</a>
+          </div>
+        </li>
         <li><a href="#booking">Booking</a></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="https://instagram.com" target="_blank">
@@ -58,13 +64,6 @@
   <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio-section">
     <h2>Portfolio</h2>
-    <div class="dropdown">
-      <button class="dropbtn">Portfolio</button>
-      <div class="dropdown-content">
-        <a href="#cars">Cars</a>
-        <a href="#miscellaneous">Miscellaneous</a>
-      </div>
-    </div>
     <div id="cars" class="portfolio-gallery">
       <h3>Cars</h3>
       <div class="gallery">
@@ -103,7 +102,6 @@
       <p>Or Contact through Instagram!</p>
     </div>
   </section>
-
 
   <!-- Footer Section -->
   <footer>
