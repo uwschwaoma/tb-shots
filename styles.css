@@ -14,11 +14,7 @@ header {
   align-items: center;
   padding: 20px 40px; /* Add more horizontal padding */
   background-color: #585858; /* Darker grey header */
-  gap: 20px;
-}
-
-header h1, header nav {
-  letter-spacing: 30px; /* Adjust as needed */
+  gap: 60px;
 }
 
 header .logo img {
