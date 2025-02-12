@@ -62,7 +62,7 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 nav { 
-  flex-grow: 1: /* --- 2/12/2025 --- */
+  flex-grow: 1; /* --- 2/12/2025 --- */
 }
 
 nav ul li {
