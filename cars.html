@@ -39,16 +39,36 @@
     <h2>Cars</h2>
     <p class="description">Do we want a description? Montoya, por favor</p>
     <div class="gallery">
-      <img src="IMG_0544.jpg" alt="BMW e92 M3">
-      <img src="car2.jpg" alt="Car 2">
-      <img src="car3.jpg" alt="Car 3">
-      <img src="car4.jpg" alt="Car 4">
-      <img src="car5.jpg" alt="Car 5">
-      <img src="car6.jpg" alt="Car 6">
-      <img src="car7.jpg" alt="Car 7">
-      <img src="car8.jpg" alt="Car 8">
+      <!-- Car 1 with multiple images -->
+      <div class="car-group" data-car="BMW e92 M3">
+        <img src="IMG_0544.jpg" alt="BMW e92 M3>
+        <img src="IMG_1286.jpg.jpg" alt="BMW e92 M3>
+        <img src="DSC09980-2.jpg" alt=BMW e92 M3">
+        <img src="IMG_0538.jpg" alt=BMW e92 M3">
+      </div>
+      <!-- Car 2 with multiple images -->
+      <div class="car-group" data-car="Nissan GTR">
+        <img src="IMG_1286.jpg" alt="Car 2 - Front">
+        <img src="car2_side.jpg" alt="Car 2 - Side">
+      </div>
+      <!-- Car 3 with multiple images -->
+      <div class="car-group" data-car="car3">
+        <img src="car3.jpg" alt="Car 3 - Front">
+        <img src="car3_detail.jpg" alt="Car 3 - Detail">
+      </div>
+      <!-- Add more car groups as needed -->
     </div>
   </section>
+
+  <!-- Modal for Carousel -->
+  <div id="carouselModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img id="carouselImage" class="modal-content" alt="">
+    <div class="carousel-controls">
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
 
   <!-- Footer Section -->
   <footer>
