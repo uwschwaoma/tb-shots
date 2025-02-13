@@ -39,6 +39,7 @@ nav ul li.dropdown .dropdown-content {
   top: 100%;
   left: 50%;
   background-color: #333333;
+  transform: translateX(-50%); /* Centers it properly */
   min-width: 160px;
   z-index: 1;
   border-radius: 5px;
@@ -70,7 +71,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 93%;
   margin: 0;
   padding: 0;
 }
