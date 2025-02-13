@@ -15,7 +15,6 @@ header {
   align-items: center;
   padding: 20px 40px;
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-  gap: 60px;
   backdrop-filter: blur(10px); /* Adds a blur effect to the header */
   width: 100%
 }
@@ -99,6 +98,10 @@ nav ul li:nth-child(4) {
 
 nav ul li a:hover {
   color: #bb86fc; /* Purple hover effect */
+}
+
+.about-tab {
+  margin-right: -60px:
 }
 
 /* Home Section */
