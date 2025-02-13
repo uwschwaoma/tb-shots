@@ -401,27 +401,31 @@ footer p {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-/* Fix for Video Gallery in Miscellaneous Section */
+/* Fix for Miscellaneous Video Gallery */
 #miscellaneous .gallery {
     display: flex; /* Aligns videos in a row */
     flex-wrap: wrap; /* Ensures responsiveness */
     justify-content: center; /* Centers videos */
-    gap: 20px; /* Adds spacing between videos */
+    gap: 20px; /* Adds even spacing */
     padding: 20px;
+    max-width: 1200px; /* Keeps gallery at a good width */
+    margin: 0 auto; /* Centers gallery on the page */
 }
 
-/* Standardizing Video Size for Miscellaneous Page */
+/* Standardizing Video Size */
 #miscellaneous .gallery video {
     width: 100%; /* Makes them responsive */
     max-width: 600px; /* Increases video size */
-    height: 350px; /* Keeps them uniform */
-    object-fit: cover; /* Prevents stretching */
+    height: 350px; /* Ensures all videos have the same height */
+    object-fit: cover; /* Prevents distortion */
     border-radius: 10px; /* Smooth corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
 }
 
-/* Hover Effect for Videos */
-#miscellaneous .gallery video:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+/* Fix for videos inside flexbox */
+#miscellaneous .gallery .gallery-item {
+    flex: 1 1 600px; /* Ensures equal width for all videos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
