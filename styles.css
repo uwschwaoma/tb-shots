@@ -309,7 +309,7 @@ footer p {
 
 .gallery img,
 .gallery video {
-  width: 100%;
+  width: 50%;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
