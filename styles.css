@@ -42,11 +42,12 @@ nav ul li.dropdown .dropdown-content {
   left: 50%;
   background-color: #333333;
   transform: translateX(-50%); /* Centers it properly */
-  min-width: 160px;
-  z-index: 999;
+  min-width: 180px;
+  z-index: 9999;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: visible;
+  visibility: visbile;
   white-space: nowrap;
 }
 
