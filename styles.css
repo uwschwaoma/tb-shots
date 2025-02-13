@@ -299,7 +299,6 @@ footer p {
   margin: 10px 0 0;
 }
 
-/* Unified Gallery Styles for Images & Videos */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -317,24 +316,23 @@ footer p {
 
 /* Videos styling */
 .gallery video {
-  width: 50%; /* Adjust to 100% if you want videos to fill the cell */
+  width: 30%; /* Change this if you want videos a different size */
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effects for images */
+/* Hover effect for images */
 .gallery img:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover effects for videos */
+/* Hover effect for videos */
 .gallery video:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
 
 /* Description Styles */
 .description {
