@@ -373,3 +373,31 @@ footer p {
   text-align: center;
   color: #bb86fc;
 }
+
+/* Fix for "Some of My Best Work" Gallery */
+.best-work .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Images and Videos: Same Size & Properly Aligned */
+.best-work .gallery img,
+.best-work .gallery video {
+    width: 100%;  /* Ensures full width in grid */
+    max-width: 400px; /* Limits max size */
+    height: 250px; /* Uniform height */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.best-work .gallery img:hover,
+.best-work .gallery video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
