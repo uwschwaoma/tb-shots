@@ -299,7 +299,7 @@ footer p {
   margin: 10px 0 0;
 }
 
-/* Gallery Styles */
+/* Unified Gallery Styles for Images & Videos */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -307,14 +307,16 @@ footer p {
   padding: 20px;
 }
 
-.gallery img {
+.gallery img,
+.gallery video {
   width: 100%;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery img:hover {
+.gallery img:hover,
+.gallery video:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
