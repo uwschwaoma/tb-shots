@@ -401,3 +401,27 @@ footer p {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+/* Fix for Video Gallery in Miscellaneous Section */
+#miscellaneous .gallery {
+    display: flex; /* Aligns videos in a row */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Centers videos */
+    gap: 20px; /* Adds spacing between videos */
+    padding: 20px;
+}
+
+/* Standardizing Video Size for Miscellaneous Page */
+#miscellaneous .gallery video {
+    width: 100%; /* Makes them responsive */
+    max-width: 600px; /* Increases video size */
+    height: 350px; /* Keeps them uniform */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover Effect for Videos */
+#miscellaneous .gallery video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
