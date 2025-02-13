@@ -295,40 +295,43 @@ footer p {
   margin: 10px 0 0;
 }
 
+
+/* Gallery container */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
+  max-width: 1200px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Centers the gallery on the page */
 }
 
-/* Images styling */
+/* Image styling */
 .gallery img {
-  width: 100%;
-  height: auto;
+  width: 100%;      /* Fills the grid cell */
+  height: auto;     /* Maintains aspect ratio */
+  display: block;   /* Removes any inline spacing issues */
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Videos styling */
+/* Video styling */
 .gallery video {
-  width: 30%; /* Change this if you want videos a different size */
+  width: 40%;      /* Fills the grid cell */
   height: auto;
+  display: block;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for images */
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Hover effect for videos */
+/* Hover effects */
+.gallery img:hover,
 .gallery video:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
+
 
 /* Description Styles */
 .description {
