@@ -32,7 +32,7 @@ header .logo img {
 /* Header Dropdown Styles */
 nav ul li.dropdown {
   position: relative;
-  overflow: visible;
+  z-index: 1000;
 }
 
 nav ul li.dropdown .dropdown-content {
@@ -43,11 +43,11 @@ nav ul li.dropdown .dropdown-content {
   background-color: #333333;
   transform: translateX(-50%); /* Centers it properly */
   min-width: 180px;
-  z-index: 9999;
+  z-index: 10000;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: visible;
-  visibility: visbile;
+  visibility: visible;
   white-space: nowrap;
 }
 
@@ -55,7 +55,12 @@ header,
 nav,
 nav ul {
   overflow: visible;
-)
+}
+
+.home-section .background-image {
+  position: relative;
+  z-index: 1;
+}
 
 nav ul {
   position: relative;
