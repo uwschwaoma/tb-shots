@@ -97,10 +97,6 @@ nav ul li a:hover {
   color: #bb86fc; /* Purple hover effect */
 }
 
-.about-tab {
-  margin-right: -60px;
-}
-
 /* Home Section */
 .home-section .background-image {
   position: relative;
