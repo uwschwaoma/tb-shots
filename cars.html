@@ -170,59 +170,6 @@
     <p>&copy; 2025 T.B. Shots. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    // JavaScript for lightbox functionality
-    // (No changes to your images or styles are made here.)
-    var albums = document.querySelectorAll('.album');
-    var lightbox = document.getElementById('lightbox');
-    var lightboxImg = document.getElementById('lightbox-img');
-    var closeLightbox = document.getElementById('close-lightbox');
-    var nextLightbox = document.getElementById('next-lightbox');
-    var prevLightbox = document.getElementById('prev-lightbox');
-
-    var currentAlbumImages = [];
-    var currentIndex = 0;
-
-    // Open the lightbox for the selected album
-    function openAlbum(albumElem) {
-      // Get the hidden images for this album
-      currentAlbumImages = Array.from(albumElem.querySelectorAll('.album-images img'));
-      currentIndex = 0;
-      lightboxImg.src = currentAlbumImages[currentIndex].src;
-      lightbox.style.display = "block";
-    }
-
-    // Attach click event to each album cover (the first image in the album container)
-    albums.forEach(function(album) {
-      // Use the first image child that is not inside .album-images
-      var albumCover = album.querySelector('img:not(.album-images img)');
-      albumCover.addEventListener('click', function() {
-        openAlbum(album);
-      });
-    });
-
-    nextLightbox.addEventListener('click', function() {
-      if (!currentAlbumImages.length) return;
-      currentIndex = (currentIndex + 1) % currentAlbumImages.length;
-      lightboxImg.src = currentAlbumImages[currentIndex].src;
-    });
-
-    prevLightbox.addEventListener('click', function() {
-      if (!currentAlbumImages.length) return;
-      currentIndex = (currentIndex - 1 + currentAlbumImages.length) % currentAlbumImages.length;
-      lightboxImg.src = currentAlbumImages[currentIndex].src;
-    });
-
-    closeLightbox.addEventListener('click', function() {
-      lightbox.style.display = "none";
-    });
-
-    // Optional: Close lightbox when clicking outside the image
-    lightbox.addEventListener('click', function(e) {
-      if (e.target === lightbox) {
-        lightbox.style.display = "none";
-      }
-    });
-  </script>
+ 
 </body>
 </html>
