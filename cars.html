@@ -6,7 +6,7 @@
   <title>T.B Shots - Car Albums</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Basic Page Styles */
+    /* Basic styles */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -96,7 +96,7 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- Header Section -->
   <header>
     <div class="logo">
       <img src="TBSHOTSLOGO-removebg-preview.png" alt="TB Shots Logo" />
@@ -107,7 +107,11 @@
         <li><a href="index.html#portfolio">Portfolio</a></li>
         <li><a href="index.html#booking">Booking</a></li>
         <li><a href="index.html#about">About Me</a></li>
-        <li><a href="https://www.instagram.com/t.b.shots/" target="_blank">Instagram</a></li>
+        <li>
+          <a href="https://www.instagram.com/t.b.shots/" target="_blank">
+            <img src="instagramicon.jpg" alt="Instagram Logo" width="30" height="30" />
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -116,29 +120,71 @@
   <section id="albums">
     <h2>Car Albums</h2>
 
-    <!-- Each album is represented by a cover image. The data-album attribute indicates which album it is. -->
+    <!-- Each album is represented by a cover image.
+         The data-album attribute identifies which album to load. -->
     <div class="album">
       <h3>AMG</h3>
+      <!-- Using "amglogo.jpg" as the album cover -->
       <a href="#" class="album-cover" data-album="amg">
-        <img src="amg/amglogo.jpg" alt="AMG Album Cover" />
+        <img src="amglogo.jpg" alt="AMG Album Cover" />
       </a>
     </div>
 
     <div class="album">
       <h3>GTR</h3>
       <a href="#" class="album-cover" data-album="gtr">
-        <img src="gtr/IMG_0363.jpg" alt="GTR Album Cover" />
+        <img src="IMG_0363.jpg" alt="GTR Album Cover" />
       </a>
     </div>
 
     <div class="album">
       <h3>FRS</h3>
       <a href="#" class="album-cover" data-album="frs">
-        <img src="frs/IMG_0363.jpg" alt="FRS Album Cover" />
+        <img src="IMG_0363.jpg" alt="FRS Album Cover" />
       </a>
     </div>
 
-    <!-- Add additional car albums here -->
+    <div class="album">
+      <h3>F80</h3>
+      <a href="#" class="album-cover" data-album="f80">
+        <img src="IMG_0963.JPG" alt="F80 Album Cover" />
+      </a>
+    </div>
+
+    <div class="album">
+      <h3>BRZ</h3>
+      <a href="#" class="album-cover" data-album="brz">
+        <img src="IMG_1501.JPG" alt="BRZ Album Cover" />
+      </a>
+    </div>
+
+    <div class="album">
+      <h3>BMW e93 M3</h3>
+      <a href="#" class="album-cover" data-album="bmw_e93_m3">
+        <img src="IMG_1262.jpg" alt="BMW e93 M3 Album Cover" />
+      </a>
+    </div>
+
+    <div class="album">
+      <h3>BMW e92 M3</h3>
+      <a href="#" class="album-cover" data-album="bmw_e92_m3">
+        <img src="DSC09980-2.jpg" alt="BMW e92 M3 Album Cover" />
+      </a>
+    </div>
+
+    <div class="album">
+      <h3>BMW 335I</h3>
+      <a href="#" class="album-cover" data-album="bmw_335i">
+        <img src="IMG_0882.JPG" alt="BMW 335I Album Cover" />
+      </a>
+    </div>
+
+    <div class="album">
+      <h3>350z</h3>
+      <a href="#" class="album-cover" data-album="350z">
+        <img src="IMG_0882.JPG" alt="350z Album Cover" />
+      </a>
+    </div>
   </section>
 
   <!-- Lightbox Modal -->
@@ -153,38 +199,79 @@
 
   <script>
     /* 
-      Define each album's images in an object.
-      Keys are the album names (matching the data-album attributes),
-      and values are arrays of image file paths.
+      Define each album's images using your existing filenames.
+      (No changes are made to the image filenames.)
     */
     const albumData = {
       amg: [
-        "amg/amglogo.jpg",
-        "amg/IMG_1167.jpg",
-        "amg/IMG_1172.jpg",
-        "amg/IMG_1201.jpg",
-        "amg/IMG_1202.jpg",
-        "amg/IMG_1218.jpg"
+        "amglogo.jpg",
+        "IMG_1167.jpg",
+        "IMG_1172.jpg",
+        "IMG_1201.jpg",
+        "IMG_1202.jpg",
+        "IMG_1218.jpg"
       ],
       gtr: [
-        "gtr/IMG_0363.jpg",
-        "gtr/IMG_0364.jpg",
-        "gtr/IMG_0361.jpg",
-        "gtr/IMG_0350.jpg",
-        "gtr/IMG_0351.jpg"
+        "IMG_0363.jpg",
+        "IMG_0364.jpg",
+        "IMG_0361.jpg",
+        "IMG_0350.jpg",
+        "IMG_0351.jpg"
       ],
       frs: [
-        "frs/IMG_0363.jpg",
-        "frs/IMG_0897.JPG",
-        "frs/IMG_0899.JPG",
-        "frs/IMG_0900.JPG",
-        "frs/IMG_0905.JPG",
-        "frs/IMG_0904.JPG"
+        "IMG_0363.jpg",
+        "IMG_0897.JPG",
+        "IMG_0899.JPG",
+        "IMG_0900.JPG",
+        "IMG_0905.JPG",
+        "IMG_0904.JPG"
+      ],
+      f80: [
+        "IMG_0963.JPG",
+        "IMG_1106.jpg",
+        "IMG_0936.jpg",
+        "IMG_0938.jpg"
+      ],
+      brz: [
+        "IMG_1501.JPG",
+        "IMG_0944.jpg",
+        "IMG_0948.jpg",
+        "IMG_1373.JPG",
+        "IMG_1377.JPG"
+      ],
+      bmw_e93_m3: [
+        "IMG_1262.jpg",
+        "IMG_1263.JPG",
+        "IMG_1264.jpg",
+        "IMG_1266.jpg",
+        "IMG_1137.jpg",
+        "IMG_0929.jpg",
+        "IMG_0932.jpg",
+        "IMG_0420.jpg"
+      ],
+      bmw_e92_m3: [
+        "DSC09980-2.jpg",
+        "IMG_0538.jpg",
+        "IMG_0544.jpg",
+        "IMG_1286.jpg"
+      ],
+      bmw_335i: [
+        "IMG_0882.JPG",
+        "IMG_0792.JPG",
+        "IMG_0796.JPG",
+        "IMG_0812.JPG",
+        "IMG_0839.JPG"
+      ],
+      "350z": [
+        "IMG_0882.JPG",
+        "IMG_0792.JPG",
+        "IMG_0796.JPG",
+        "IMG_0795.JPG",
+        "IMG_0798.JPG"
       ]
-      // Add more albums as needed
     };
 
-    let currentAlbum = null; // Album key (e.g., 'amg')
+    let currentAlbum = null; // holds album key (e.g., "amg")
     let currentIndex = 0;
 
     const albumCovers = document.querySelectorAll('.album-cover');
@@ -194,7 +281,7 @@
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
 
-    // Open the lightbox with the given album and index
+    // Open the lightbox for a given album and index
     function openLightbox(album, index) {
       currentAlbum = album;
       currentIndex = index;
@@ -207,14 +294,14 @@
       lightbox.style.display = 'none';
     }
 
-    // Navigate to the next image in the current album
+    // Show the next image within the current album
     function showNext() {
       if (!currentAlbum) return;
       currentIndex = (currentIndex + 1) % albumData[currentAlbum].length;
       lightboxImg.src = albumData[currentAlbum][currentIndex];
     }
 
-    // Navigate to the previous image in the current album
+    // Show the previous image within the current album
     function showPrev() {
       if (!currentAlbum) return;
       currentIndex = (currentIndex - 1 + albumData[currentAlbum].length) % albumData[currentAlbum].length;
@@ -234,9 +321,9 @@
     nextBtn.addEventListener('click', showNext);
     prevBtn.addEventListener('click', showPrev);
 
-    // Optional: close the lightbox when clicking outside the image area
+    // Optional: Close lightbox if clicking outside the image area
     window.addEventListener('click', (e) => {
-      if (e.target == lightbox) {
+      if (e.target === lightbox) {
         closeLightbox();
       }
     });
