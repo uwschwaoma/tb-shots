@@ -1,83 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>T.B Shots - Car Albums</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* --- Lightbox Styles --- */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-    .lightbox-content {
-      margin: auto;
-      display: block;
-      max-width: 80%;
-    }
-    .close {
-      position: absolute;
-      top: 30px;
-      right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .lightbox-controls .prev,
-    .lightbox-controls .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      color: white;
-      font-size: 40px;
-      user-select: none;
-      padding: 0 10px;
-      transform: translateY(-50%);
-    }
-    .lightbox-controls .prev { left: 20px; }
-    .lightbox-controls .next { right: 20px; }
-
-    /* --- Gallery & Album Styles --- */
-    .portfolio-section {
-      padding: 20px;
-    }
-    .album {
-      margin-bottom: 40px;
-    }
-    .album h3 {
-      margin-bottom: 10px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .gallery a {
-      display: block;
-    }
-    .gallery img {
-      max-width: 200px;
-      cursor: pointer;
-      display: block;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T.B Shots - Cars </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header Section -->
   <header>
     <div class="logo">
-      <img src="TBSHOTSLOGO-removebg-preview.png" alt="TB Shots Logo" />
+      <img src="TBSHOTSLOGO-removebg-preview.png" alt="TB Shots Logo">
     </div>
     <nav>
       <ul>
@@ -93,172 +27,131 @@
         <li><a href="index.html#about">About Me</a></li>
         <li>
           <a href="https://www.instagram.com/t.b.shots/" target="_blank">
-            <img src="instagramicon.jpg" alt="Instagram Logo" width="30" height="30" />
+            <img src="instagramicon.jpg" alt="Instagram Logo" width="30px" height="30px">
           </a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <!-- Car Albums Section -->
-  <section id="albums" class="portfolio-section">
-    <h2>Car Albums</h2>
+     <!-- Cars Section -->
+  <section id="cars" class="portfolio-section">
+    <h2>Cars</h2>
+  
+    <div class="gallery">
+   <!-- AMG -->
+    <img src="amglogo.jpg" alt="">
+    <img src="IMG_1167.jpg" alt="">
+    <img src="IMG_1172.jpg" alt="">
+    <img src="IMG_1201.jpg" alt="">
+    <img src="IMG_1202.jpg" alt="">
+    <img src="IMG_1218.jpg" alt="">
 
-    <!-- AMG Album -->
-    <section id="album-amg" class="album">
-      <h3>AMG</h3>
-      <div class="gallery">
-        <a href="#" class="gallery-item" data-group="amg">
-          <img src="amg/amglogo.jpg" alt="AMG Logo" />
-        </a>
-        <a href="#" class="gallery-item" data-group="amg">
-          <img src="amg/IMG_1167.jpg" alt="AMG Detail" />
-        </a>
-        <a href="#" class="gallery-item" data-group="amg">
-          <img src="amg/IMG_1172.jpg" alt="AMG Side View" />
-        </a>
-        <a href="#" class="gallery-item" data-group="amg">
-          <img src="amg/IMG_1201.jpg" alt="AMG Rear" />
-        </a>
-        <a href="#" class="gallery-item" data-group="amg">
-          <img src="amg/IMG_1202.jpg" alt="AMG Front" />
-        </a>
-        <a href="#" class="gallery-item" data-group="amg">
-          <img src="amg/IMG_1218.jpg" alt="AMG Angle" />
-        </a>
-      </div>
-    </section>
+      <!-- GTR -->
+    <img src="IMG_0363.jpg" alt="">
+      <img src="IMG_0364.jpg" alt="">
+      <img src="IMG_0361.jpg" alt="">
+      <img src="IMG_0350.jpg" alt="">
+      <img src="IMG_0351.jpg" alt="">
+      
+<! -- FRS -->
+       <img src="IMG_0363.jpg" alt="">
+       <img src="IMG_0897.JPG" alt="">
+       <img src="IMG_0899.JPG" alt="">
+       <img src="IMG_0900.JPG" alt="">
+       <img src="IMG_0905.JPG" alt="">
+       <img src="IMG_0904.JPG" alt="">
+      
+<! -- F80 -->
+       <img src="IMG_0963.JPG" alt="">
+       <img src="IMG_1106.jpg" alt="">
+       <img src="IMG_0936.jpg" alt="">
+       <img src="IMG_0938.jpg" alt="">
+<! -- BRZ -->
+      <img src="IMG_1501.JPG" alt="">
+       <img src="IMG_0944.jpg" alt="">
+       <img src="IMG_0948.jpg" alt="">
+       <img src="IMG_1373.JPG" alt="">
+      <img src="IMG_1377.JPG" alt="">
 
-    <!-- GTR Album -->
-    <section id="album-gtr" class="album">
-      <h3>GTR</h3>
-      <div class="gallery">
-        <a href="#" class="gallery-item" data-group="gtr">
-          <img src="gtr/IMG_0363.jpg" alt="GTR Front" />
-        </a>
-        <a href="#" class="gallery-item" data-group="gtr">
-          <img src="gtr/IMG_0364.jpg" alt="GTR Side" />
-        </a>
-        <a href="#" class="gallery-item" data-group="gtr">
-          <img src="gtr/IMG_0361.jpg" alt="GTR Rear" />
-        </a>
-        <a href="#" class="gallery-item" data-group="gtr">
-          <img src="gtr/IMG_0350.jpg" alt="GTR Detail" />
-        </a>
-        <a href="#" class="gallery-item" data-group="gtr">
-          <img src="gtr/IMG_0351.jpg" alt="GTR Interior" />
-        </a>
-      </div>
-    </section>
+<! --BMW e93 M3 -->
+      <img src="IMG_1262.jpg" alt="">
+       <img src="IMG_1263.JPG" alt="">
+       <img src="IMG_1264.jpg" alt="">
+       <img src="IMG_1266.jpg" alt="">
+      <img src="IMG_1137.jpg" alt="">
+      <img src="IMG_0929.jpg" alt="">
+      <img src="IMG_0932.jpg" alt="">
+      <img src="IMG_0420.jpg" alt="">
+      
+      
+<! -- bmw e92 M3-->
+      <img src="DSC09980-2.jpg" alt="">
+      <img src="IMG_0538.jpg" alt="">
+      <img src="IMG_0544.jpg" alt="">
+      <img src="IMG_1286.jpg" alt="">
 
-    <!-- FRS Album -->
-    <section id="album-frs" class="album">
-      <h3>FRS</h3>
-      <div class="gallery">
-        <a href="#" class="gallery-item" data-group="frs">
-          <img src="frs/IMG_0363.jpg" alt="FRS Front" />
-        </a>
-        <a href="#" class="gallery-item" data-group="frs">
-          <img src="frs/IMG_0897.JPG" alt="FRS Side" />
-        </a>
-        <a href="#" class="gallery-item" data-group="frs">
-          <img src="frs/IMG_0899.JPG" alt="FRS Rear" />
-        </a>
-        <a href="#" class="gallery-item" data-group="frs">
-          <img src="frs/IMG_0900.JPG" alt="FRS Detail" />
-        </a>
-        <a href="#" class="gallery-item" data-group="frs">
-          <img src="frs/IMG_0905.JPG" alt="FRS Angle" />
-        </a>
-        <a href="#" class="gallery-item" data-group="frs">
-          <img src="frs/IMG_0904.JPG" alt="FRS Closeup" />
-        </a>
-      </div>
-    </section>
 
-    <!-- Add Additional Albums (e.g., F80, BRZ, BMW, 350z, etc.) in similar sections -->
+  <! -- BMW 335I->
+      <img src=" IMG_0882.JPG" alt="">
+      <img src="IMG_0792.JPG" alt="">
+      <img src="IMG_0796.JPG" alt="">
+      <img src="IMG_0812.JPG" alt="">
+      <img src="IMG_0839.JPG" alt="">
+      <img src="" alt="">
+  
+  <! -- 350z->
+      <img src="IMG_0882.JPG" alt="">
+      <img src="IMG_0792.JPG" alt="">
+      <img src="IMG_0796.JPG" alt="">
+      <img src="IMG_0795.JPG" alt="">
+      <img src="IMG_0798.JPG" alt="">
+      
 
-  </section>
 
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img" alt="Expanded view" />
-    <div class="lightbox-controls">
-      <a class="prev">&#10094;</a>
-      <a class="next">&#10095;</a>
+
+      
+    <img src="babybluebmw.jpg" alt="">
+    <img src="babyofgreysubipt2.jpg" alt="">
+
+    
+    <img src="backofm4.jpg" alt="">
+    <img src="blackwheelsbmw.jpg" alt="">
+    <img src="c63.jpg" alt="">
+
+    <img src="frontofbluebmw.jpg" alt="">
+    <img src="frontofwhitebmw.jpg" alt="">
+    
+
+    <img src="gtrlogo.jpg" alt="">
+    <img src="mercedesbenz.jpg" alt="">
+    <img src="sunshine.JPG" alt="">
+     <img src="gasstation.jpg"alt="">
+
+     <img src="IMG_0347.JPG"alt="">
+
+
+    <img src="IMG_0359.JPG" alt="">
+    <img src="IMG_9443.JPG" alt="">
+    <img src="IMG_0904.JPG" alt="">
+     <img src="IMG_1202.JPG"alt="">
+
+     <img src="IMG_0118.JPG"alt="">
+    <img src="frontofgreysubi.jpg"alt="">
+      <img src="sideofwhitesubi.jpg"alt="">
+    
+
     </div>
-  </div>
+  </section>
 
   <!-- Footer Section -->
   <footer>
     <div class="social-media">
       <a href="https://www.instagram.com/t.b.shots/" target="_blank">
-        <img src="instagram-logo.jpg" alt="Instagram Logo" />
+        <img src="instagram-logo.jpg" alt="Instagram Logo">
       </a>
     </div>
     <p>&copy; 2025 T.B. Shots. All Rights Reserved.</p>
   </footer>
-
-  <!-- JavaScript for Lightbox Functionality -->
-  <script>
-    // Gather all gallery items
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.querySelector('.close');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
-
-    let currentIndex = 0;
-    let currentGroupItems = [];
-
-    // Open the lightbox and show the clicked image from its album group
-    function openLightbox(index, groupItems) {
-      currentIndex = index;
-      lightbox.style.display = 'block';
-      lightboxImg.src = groupItems[index].querySelector('img').src;
-    }
-
-    // Close the lightbox
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-    }
-
-    // Show next image in the current album
-    function showNext() {
-      currentIndex = (currentIndex + 1) % currentGroupItems.length;
-      openLightbox(currentIndex, currentGroupItems);
-    }
-
-    // Show previous image in the current album
-    function showPrev() {
-      currentIndex = (currentIndex - 1 + currentGroupItems.length) % currentGroupItems.length;
-      openLightbox(currentIndex, currentGroupItems);
-    }
-
-    // When any gallery image is clicked, build an array of that album’s images
-    galleryItems.forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const group = item.getAttribute('data-group');
-        currentGroupItems = Array.from(document.querySelectorAll(`.gallery-item[data-group="${group}"]`));
-        currentIndex = currentGroupItems.indexOf(item);
-        openLightbox(currentIndex, currentGroupItems);
-      });
-    });
-
-    closeBtn.addEventListener('click', closeLightbox);
-    nextBtn.addEventListener('click', showNext);
-    prevBtn.addEventListener('click', showPrev);
-
-    // Optional: close lightbox when clicking outside the image
-    window.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
-  </script>
 </body>
 </html>
-
