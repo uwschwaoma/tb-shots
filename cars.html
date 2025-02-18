@@ -1,330 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>T.B Shots - Car Albums</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    /* Basic styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 10px 20px;
-    }
-    header .logo img {
-      max-height: 50px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-    }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-    }
-    /* Albums Section */
-    #albums {
-      padding: 20px;
-    }
-    .album {
-      margin-bottom: 30px;
-    }
-    .album h3 {
-      margin-bottom: 10px;
-    }
-    .album-cover img {
-      max-width: 300px;
-      cursor: pointer;
-      border: 2px solid #ccc;
-      transition: border-color 0.3s;
-    }
-    .album-cover img:hover {
-      border-color: #888;
-    }
-    /* Lightbox Styles */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-    .lightbox-content {
-      margin: auto;
-      display: block;
-      max-width: 80%;
-    }
-    .close {
-      position: absolute;
-      top: 30px;
-      right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .lightbox-controls .prev,
-    .lightbox-controls .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      color: white;
-      font-size: 40px;
-      user-select: none;
-      padding: 0 10px;
-      transform: translateY(-50%);
-    }
-    .lightbox-controls .prev {
-      left: 20px;
-    }
-    .lightbox-controls .next {
-      right: 20px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T.B Shots - Cars</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header Section -->
   <header>
     <div class="logo">
-      <img src="TBSHOTSLOGO-removebg-preview.png" alt="TB Shots Logo" />
+      <img src="TBSHOTSLOGO-removebg-preview.png" alt="TB Shots Logo">
     </div>
     <nav>
       <ul>
         <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li class="dropdown">
+          <a href="index.html#portfolio">Portfolio</a>
+          <div class="dropdown-content">
+            <a href="cars.html">Cars</a>
+            <a href="miscellaneous.html">Miscellaneous</a>
+          </div>
+        </li>
         <li><a href="index.html#booking">Booking</a></li>
         <li><a href="index.html#about">About Me</a></li>
         <li>
           <a href="https://www.instagram.com/t.b.shots/" target="_blank">
-            <img src="instagramicon.jpg" alt="Instagram Logo" width="30" height="30" />
+            <img src="instagramicon.jpg" alt="Instagram Logo" width="30" height="30">
           </a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <!-- Car Albums Section -->
-  <section id="albums">
-    <h2>Car Albums</h2>
-
-    <!-- Each album is represented by a cover image.
-         The data-album attribute identifies which album to load. -->
-    <div class="album">
-      <h3>AMG</h3>
-      <!-- Using "amglogo.jpg" as the album cover -->
-      <a href="#" class="album-cover" data-album="amg">
-        <img src="amglogo.jpg" alt="AMG Album Cover" />
-      </a>
+  <!-- Cars Section – Each car is now an album -->
+  <section id="cars" class="portfolio-section">
+    <h2>Cars</h2>
+    
+    <!-- AMG Album -->
+    <div class="album" data-album="amg">
+      <!-- Album cover (shown on the page) -->
+      <img src="amglogo.jpg" alt="AMG">
+      <!-- All album images (hidden, used by the lightbox) -->
+      <div class="album-images" style="display:none;">
+        <img src="amglogo.jpg" alt="">
+        <img src="IMG_1167.jpg" alt="">
+        <img src="IMG_1172.jpg" alt="">
+        <img src="IMG_1201.jpg" alt="">
+        <img src="IMG_1202.jpg" alt="">
+        <img src="IMG_1218.jpg" alt="">
+      </div>
     </div>
 
-    <div class="album">
-      <h3>GTR</h3>
-      <a href="#" class="album-cover" data-album="gtr">
-        <img src="IMG_0363.jpg" alt="GTR Album Cover" />
-      </a>
+    <!-- GTR Album -->
+    <div class="album" data-album="gtr">
+      <img src="IMG_0363.jpg" alt="GTR">
+      <div class="album-images" style="display:none;">
+        <img src="IMG_0363.jpg" alt="">
+        <img src="IMG_0364.jpg" alt="">
+        <img src="IMG_0361.jpg" alt="">
+        <img src="IMG_0350.jpg" alt="">
+        <img src="IMG_0351.jpg" alt="">
+      </div>
     </div>
 
-    <div class="album">
-      <h3>FRS</h3>
-      <a href="#" class="album-cover" data-album="frs">
-        <img src="IMG_0363.jpg" alt="FRS Album Cover" />
-      </a>
+    <!-- FRS Album -->
+    <div class="album" data-album="frs">
+      <img src="IMG_0363.jpg" alt="FRS">
+      <div class="album-images" style="display:none;">
+        <img src="IMG_0363.jpg" alt="">
+        <img src="IMG_0897.JPG" alt="">
+        <img src="IMG_0899.JPG" alt="">
+        <img src="IMG_0900.JPG" alt="">
+        <img src="IMG_0905.JPG" alt="">
+        <img src="IMG_0904.JPG" alt="">
+      </div>
     </div>
 
-    <div class="album">
-      <h3>F80</h3>
-      <a href="#" class="album-cover" data-album="f80">
-        <img src="IMG_0963.JPG" alt="F80 Album Cover" />
-      </a>
+    <!-- F80 Album -->
+    <div class="album" data-album="f80">
+      <img src="IMG_0963.JPG" alt="F80">
+      <div class="album-images" style="display:none;">
+        <img src="IMG_0963.JPG" alt="">
+        <img src="IMG_1106.jpg" alt="">
+        <img src="IMG_0936.jpg" alt="">
+        <img src="IMG_0938.jpg" alt="">
+      </div>
     </div>
 
-    <div class="album">
-      <h3>BRZ</h3>
-      <a href="#" class="album-cover" data-album="brz">
-        <img src="IMG_1501.JPG" alt="BRZ Album Cover" />
-      </a>
+    <!-- BRZ Album -->
+    <div class="album" data-album="brz">
+      <img src="IMG_1501.JPG" alt="BRZ">
+      <div class="album-images" style="display:none;">
+        <img src="IMG_1501.JPG" alt="">
+        <img src="IMG_0944.jpg" alt="">
+        <img src="IMG_0948.jpg" alt="">
+        <img src="IMG_1373.JPG" alt="">
+        <img src="IMG_1377.JPG" alt="">
+      </div>
     </div>
 
-    <div class="album">
-      <h3>BMW e93 M3</h3>
-      <a href="#" class="album-cover" data-album="bmw_e93_m3">
-        <img src="IMG_1262.jpg" alt="BMW e93 M3 Album Cover" />
-      </a>
+    <!-- BMW e93 M3 Album -->
+    <div class="album" data-album="bmw_e93_m3">
+      <img src="IMG_1262.jpg" alt="BMW e93 M3">
+      <div class="album-images" style="display:none;">
+        <img src="IMG_1262.jpg" alt="">
+        <img src="IMG_1263.JPG" alt="">
+        <img src="IMG_1264.jpg" alt="">
+        <img src="IMG_1266.jpg" alt="">
+        <img src="IMG_1137.jpg" alt="">
+        <img src="IMG_0929.jpg" alt="">
+        <img src="IMG_0932.jpg" alt="">
+        <img src="IMG_0420.jpg" alt="">
+      </div>
     </div>
 
-    <div class="album">
-      <h3>BMW e92 M3</h3>
-      <a href="#" class="album-cover" data-album="bmw_e92_m3">
-        <img src="DSC09980-2.jpg" alt="BMW e92 M3 Album Cover" />
-      </a>
+    <!-- BMW e92 M3 Album -->
+    <div class="album" data-album="bmw_e92_m3">
+      <img src="DSC09980-2.jpg" alt="BMW e92 M3">
+      <div class="album-images" style="display:none;">
+        <img src="DSC09980-2.jpg" alt="">
+        <img src="IMG_0538.jpg" alt="">
+        <img src="IMG_0544.jpg" alt="">
+        <img src="IMG_1286.jpg" alt="">
+      </div>
     </div>
 
-    <div class="album">
-      <h3>BMW 335I</h3>
-      <a href="#" class="album-cover" data-album="bmw_335i">
-        <img src="IMG_0882.JPG" alt="BMW 335I Album Cover" />
-      </a>
+    <!-- BMW 335I Album -->
+    <div class="album" data-album="bmw_335i">
+      <img src="IMG_0882.JPG" alt="BMW 335I">
+      <div class="album-images" style="display:none;">
+        <img src="IMG_0882.JPG" alt="">
+        <img src="IMG_0792.JPG" alt="">
+        <img src="IMG_0796.JPG" alt="">
+        <img src="IMG_0812.JPG" alt="">
+        <img src="IMG_0839.JPG" alt="">
+      </div>
     </div>
 
-    <div class="album">
-      <h3>350z</h3>
-      <a href="#" class="album-cover" data-album="350z">
-        <img src="IMG_0882.JPG" alt="350z Album Cover" />
-      </a>
+    <!-- 350z Album -->
+    <div class="album" data-album="350z">
+      <img src="IMG_0882.JPG" alt="350z">
+      <div class="album-images" style="display:none;">
+        <img src="IMG_0882.JPG" alt="">
+        <img src="IMG_0792.JPG" alt="">
+        <img src="IMG_0796.JPG" alt="">
+        <img src="IMG_0795.JPG" alt="">
+        <img src="IMG_0798.JPG" alt="">
+      </div>
     </div>
   </section>
 
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img" alt="Expanded view" />
-    <div class="lightbox-controls">
-      <a class="prev">&#10094;</a>
-      <a class="next">&#10095;</a>
-    </div>
+  <!-- Lightbox Modal (markup only; no style changes applied here) -->
+  <div id="lightbox">
+    <span id="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded view">
+    <button id="prev-lightbox">Prev</button>
+    <button id="next-lightbox">Next</button>
   </div>
 
+  <!-- Footer Section -->
+  <footer>
+    <div class="social-media">
+      <a href="https://www.instagram.com/t.b.shots/" target="_blank">
+        <img src="instagram-logo.jpg" alt="Instagram Logo">
+      </a>
+    </div>
+    <p>&copy; 2025 T.B. Shots. All Rights Reserved.</p>
+  </footer>
+
   <script>
-    /* 
-      Define each album's images using your existing filenames.
-      (No changes are made to the image filenames.)
-    */
-    const albumData = {
-      amg: [
-        "amglogo.jpg",
-        "IMG_1167.jpg",
-        "IMG_1172.jpg",
-        "IMG_1201.jpg",
-        "IMG_1202.jpg",
-        "IMG_1218.jpg"
-      ],
-      gtr: [
-        "IMG_0363.jpg",
-        "IMG_0364.jpg",
-        "IMG_0361.jpg",
-        "IMG_0350.jpg",
-        "IMG_0351.jpg"
-      ],
-      frs: [
-        "IMG_0363.jpg",
-        "IMG_0897.JPG",
-        "IMG_0899.JPG",
-        "IMG_0900.JPG",
-        "IMG_0905.JPG",
-        "IMG_0904.JPG"
-      ],
-      f80: [
-        "IMG_0963.JPG",
-        "IMG_1106.jpg",
-        "IMG_0936.jpg",
-        "IMG_0938.jpg"
-      ],
-      brz: [
-        "IMG_1501.JPG",
-        "IMG_0944.jpg",
-        "IMG_0948.jpg",
-        "IMG_1373.JPG",
-        "IMG_1377.JPG"
-      ],
-      bmw_e93_m3: [
-        "IMG_1262.jpg",
-        "IMG_1263.JPG",
-        "IMG_1264.jpg",
-        "IMG_1266.jpg",
-        "IMG_1137.jpg",
-        "IMG_0929.jpg",
-        "IMG_0932.jpg",
-        "IMG_0420.jpg"
-      ],
-      bmw_e92_m3: [
-        "DSC09980-2.jpg",
-        "IMG_0538.jpg",
-        "IMG_0544.jpg",
-        "IMG_1286.jpg"
-      ],
-      bmw_335i: [
-        "IMG_0882.JPG",
-        "IMG_0792.JPG",
-        "IMG_0796.JPG",
-        "IMG_0812.JPG",
-        "IMG_0839.JPG"
-      ],
-      "350z": [
-        "IMG_0882.JPG",
-        "IMG_0792.JPG",
-        "IMG_0796.JPG",
-        "IMG_0795.JPG",
-        "IMG_0798.JPG"
-      ]
-    };
+    // JavaScript for lightbox functionality
+    // (No changes to your images or styles are made here.)
+    var albums = document.querySelectorAll('.album');
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var closeLightbox = document.getElementById('close-lightbox');
+    var nextLightbox = document.getElementById('next-lightbox');
+    var prevLightbox = document.getElementById('prev-lightbox');
 
-    let currentAlbum = null; // holds album key (e.g., "amg")
-    let currentIndex = 0;
+    var currentAlbumImages = [];
+    var currentIndex = 0;
 
-    const albumCovers = document.querySelectorAll('.album-cover');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.querySelector('.close');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
-
-    // Open the lightbox for a given album and index
-    function openLightbox(album, index) {
-      currentAlbum = album;
-      currentIndex = index;
-      lightbox.style.display = 'block';
-      lightboxImg.src = albumData[album][index];
+    // Open the lightbox for the selected album
+    function openAlbum(albumElem) {
+      // Get the hidden images for this album
+      currentAlbumImages = Array.from(albumElem.querySelectorAll('.album-images img'));
+      currentIndex = 0;
+      lightboxImg.src = currentAlbumImages[currentIndex].src;
+      lightbox.style.display = "block";
     }
 
-    // Close the lightbox
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-    }
-
-    // Show the next image within the current album
-    function showNext() {
-      if (!currentAlbum) return;
-      currentIndex = (currentIndex + 1) % albumData[currentAlbum].length;
-      lightboxImg.src = albumData[currentAlbum][currentIndex];
-    }
-
-    // Show the previous image within the current album
-    function showPrev() {
-      if (!currentAlbum) return;
-      currentIndex = (currentIndex - 1 + albumData[currentAlbum].length) % albumData[currentAlbum].length;
-      lightboxImg.src = albumData[currentAlbum][currentIndex];
-    }
-
-    // When an album cover is clicked, open its album (starting at the first image)
-    albumCovers.forEach(cover => {
-      cover.addEventListener('click', (e) => {
-        e.preventDefault();
-        const album = cover.getAttribute('data-album');
-        openLightbox(album, 0);
+    // Attach click event to each album cover (the first image in the album container)
+    albums.forEach(function(album) {
+      // Use the first image child that is not inside .album-images
+      var albumCover = album.querySelector('img:not(.album-images img)');
+      albumCover.addEventListener('click', function() {
+        openAlbum(album);
       });
     });
 
-    closeBtn.addEventListener('click', closeLightbox);
-    nextBtn.addEventListener('click', showNext);
-    prevBtn.addEventListener('click', showPrev);
+    nextLightbox.addEventListener('click', function() {
+      if (!currentAlbumImages.length) return;
+      currentIndex = (currentIndex + 1) % currentAlbumImages.length;
+      lightboxImg.src = currentAlbumImages[currentIndex].src;
+    });
 
-    // Optional: Close lightbox if clicking outside the image area
-    window.addEventListener('click', (e) => {
+    prevLightbox.addEventListener('click', function() {
+      if (!currentAlbumImages.length) return;
+      currentIndex = (currentIndex - 1 + currentAlbumImages.length) % currentAlbumImages.length;
+      lightboxImg.src = currentAlbumImages[currentIndex].src;
+    });
+
+    closeLightbox.addEventListener('click', function() {
+      lightbox.style.display = "none";
+    });
+
+    // Optional: Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', function(e) {
       if (e.target === lightbox) {
-        closeLightbox();
+        lightbox.style.display = "none";
       }
     });
   </script>
