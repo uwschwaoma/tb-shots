@@ -484,8 +484,8 @@ footer p {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  width: 60%;
+  max-width: 500px;
   animation-name: zoom;
   animation-duration: 0.6s;
 }
