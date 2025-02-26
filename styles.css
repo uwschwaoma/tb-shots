@@ -467,25 +467,5 @@ footer p {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
-@keyframes zoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
 
-/* Close button styling */
-.close {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-}
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-}
 
