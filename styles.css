@@ -417,7 +417,6 @@ footer p {
     width: 100%; /* Makes them responsive */
     max-width: 600px; /* Increases video size */
     height: 350px; /* Ensures all videos have the same height */
-    object-fit: cover; /* Prevents distortion */
     border-radius: 10px; /* Smooth corners */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
 }
