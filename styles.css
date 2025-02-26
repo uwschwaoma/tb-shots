@@ -414,20 +414,21 @@ footer p {
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
-    width: 100%; /* Makes them responsive */
-    max-width: 600px; /* Increases video size */
-    height: 350px; /* Ensures all videos have the same height */
-    border-radius: 10px; /* Smooth corners */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    width: 100%;
+    max-width: 600px;
+    height: auto; /* Ensures aspect ratio is maintained */
+    aspect-ratio: 16 / 9; /* Keeps the video shape */
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Fix for videos inside flexbox */
 #miscellaneous .gallery .gallery-item {
-    flex: 1 1 600px; /* Ensures equal width for all videos */
+    flex: 1 1 auto; /* Prevents forced size */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* Modal container (hidden by default) */
 .modal {
   display: none; 
