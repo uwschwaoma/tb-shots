@@ -153,5 +153,39 @@
     </div>
     <p>&copy; 2025 T.B. Shots. All Rights Reserved.</p>
   </footer>
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-image">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Get modal elements
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-image");
+  const closeBtn = document.querySelector(".close");
+
+  // Select all images within the gallery
+  const galleryImages = document.querySelectorAll(".gallery img");
+  galleryImages.forEach(image => {
+    image.addEventListener("click", function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;  // Use the clicked image's src for the modal image
+    });
+  });
+
+  // Close the modal when the close button is clicked
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  // Also close the modal when clicking anywhere outside the image
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
 </body>
 </html>
