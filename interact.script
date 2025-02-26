@@ -1,0 +1,22 @@
+<script>
+  // Get modal elements
+  var modal = document.getElementById("modal");
+  var modalImg = document.getElementById("modal-img");
+  var captionText = document.getElementById("caption");
+
+  // Add click event listener to every image inside the gallery
+  var galleryImages = document.querySelectorAll(".gallery img");
+  galleryImages.forEach(function(img) {
+    img.addEventListener("click", function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;       // Set the modal image source to the clicked image
+      captionText.innerHTML = this.alt;  // Optionally, display the alt text as caption
+    });
+  });
+
+  // Close modal when the close button is clicked
+  var closeBtn = document.getElementsByClassName("close")[0];
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+</script>
