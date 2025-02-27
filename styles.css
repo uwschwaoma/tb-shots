@@ -425,11 +425,14 @@ footer p {
 }
 
 #miscellaneous .gallery .gallery-item {
-    display: inline-block; /* Allows dynamic resizing */
-    width: fit-content; /* Makes box fit the video's natural size */
-    margin: 0;
-    padding: 0;
+    display: inline-flex; /* Ensures the container only wraps around the video */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Matches video width exactly */
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 #miscellaneous .gallery .gallery-item video {
