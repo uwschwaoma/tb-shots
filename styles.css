@@ -420,15 +420,16 @@ footer p {
     height: auto; /* Ensures aspect ratio is maintained */
     aspect-ratio: 16 / 9; /* Keeps the video shape */
     border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  
+    display: block;
 }
 
 #miscellaneous .gallery .gallery-item {
-    display: flex;
-    width: fit-content;
-    max-width: 600px;
-    text-align: center;
-    flex-direction: column;
+    display: flex; /* Allows dynamic resizing */
+    flex-direction: column; /* Keeps videos stacked */
+    align-items: center; /* Centers video within its box */
+    width: fit-content; /* Makes box fit the video's natural size */
+    max-width: 600px;    
 }
 
 #miscellaneous .gallery .gallery-item video {
