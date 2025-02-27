@@ -407,23 +407,21 @@ footer p {
     flex-wrap: wrap; /* Ensures responsiveness */
     justify-content: center; /* Centers videos */
     gap: 0; /* Adds even spacing */
-    padding: 10px 0;
+    padding: 0;
     max-width: 100%; /* Keeps gallery at a good width */
     margin: 0 auto; /* Centers gallery on the page */
     align-items: center;
-    overflow: hidden;
 }
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
-   width: 80% !important;  /* Force max width */
-    height: auto !important;  /* Maintain 16:9 aspect ratio */
-    max-width: 700px !important; /* Hard limit */
-    aspect-ratio: 16/9 !important;
-    object-fit: contain !important; /* Prevent cropping */
-    border-radius: 10px !important;
-    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2) !important;
-    display: block !important;
+    width: 20%;
+    max-width: 220px;
+    height: auto; /* Ensures aspect ratio is maintained */
+    aspect-ratio: 16 / 9; /* Keeps the video shape */
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  
+    display: block;
 }
 
 #miscellaneous .gallery .gallery-item {
@@ -452,8 +450,8 @@ footer p {
 
 @media screen and (max-width: 768px) {
     #miscellaneous .gallery video {
-        width: 100% !important /* Make videos take up more space on smaller screens */
-        max-width: 500px; /* Further limit max size */
+        width: 50%; /* Make videos take up more space on smaller screens */
+        max-width: 180px; /* Further limit max size */
     }
 }
 
