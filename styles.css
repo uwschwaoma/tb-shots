@@ -420,8 +420,8 @@ footer p {
     aspect-ratio: 16 / 9; /* Keeps the video shape */
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    object-fit: cover; /* changes 2/26/2025 */
-    max-height: 337px;
+    object-fit: contain; /* changes 2/26/2025 */
+    /*max-height: 337px; */
 }
 
 #miscellaneous .gallery .gallery-item {
