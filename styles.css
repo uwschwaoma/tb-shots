@@ -448,6 +448,13 @@ footer p {
     padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+    #miscellaneous .gallery video {
+        width: 90%; /* Make videos take up more space on smaller screens */
+        max-width: 300px; /* Further limit max size */
+    }
+}
+
 /* Modal container (hidden by default) */
 .modal {
   display: none; 
