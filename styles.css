@@ -408,7 +408,7 @@ footer p {
     justify-content: center; /* Centers videos */
     gap: 0px; /* Adds even spacing */
     padding: 0px;
-    max-width: 1200px; /* Keeps gallery at a good width */
+    max-width: 100%; /* Keeps gallery at a good width */
     margin: 0 auto; /* Centers gallery on the page */
     align-items: center;
 }
