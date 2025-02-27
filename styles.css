@@ -435,8 +435,10 @@ footer p {
 /* 2/26/2025 */
 .video-container {
     display: flex;
+   align-items: center;
+    width: auto; /* Ensures it doesn't shrink */
+    height: auto;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 /* Modal container (hidden by default) */
