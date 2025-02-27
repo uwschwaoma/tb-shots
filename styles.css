@@ -70,6 +70,7 @@ nav ul li.dropdown .dropdown-content {
     font-size: 32px; /* Increases the font size */
     font-weight: bold;
     margin-top: 40px; /* Adds more space between the text and the background image */
+    margin-bottom: 10px;
     padding-top: 20px; /* Extra padding for better spacing */
     text-transform: none;
     letter-spacing: 2px; /* Adds more space between letters */
