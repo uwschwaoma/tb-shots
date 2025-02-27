@@ -54,13 +54,16 @@ nav ul li.dropdown .dropdown-content {
   white-space: nowrap;
 }
 
-/* Ensure "Highlights" header stays centered */
-.highlights-section h2,
-.home-section h2 {
-    text-align: center; /* Ensures text is centered */
-    width: 100%; /* Takes full width */
-    margin: 0 auto; /* Ensures proper centering */
-    display: block; /* Ensures it doesn't behave like an inline element */
+/* Fix "Highlights" header alignment */
+.best-work {
+    text-align: center; /* Center all content inside */
+}
+
+.best-work h2 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; /* Ensures it stays centered */
+    display: block;
 }
 
 /* Prevent background from overlapping dropdown */
