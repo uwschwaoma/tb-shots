@@ -416,13 +416,13 @@ footer p {
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
-   width: 40% !important;  /* Force max width */
+   width: 80% !important;  /* Force max width */
     height: auto !important;  /* Maintain 16:9 aspect ratio */
-    max-width: 400px !important; /* Hard limit */
+    max-width: 700px !important; /* Hard limit */
     aspect-ratio: 16/9 !important;
     object-fit: contain !important; /* Prevent cropping */
     border-radius: 10px !important;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2) !important;
     display: block !important;
 }
 
@@ -452,8 +452,8 @@ footer p {
 
 @media screen and (max-width: 768px) {
     #miscellaneous .gallery video {
-        width: 60% !important /* Make videos take up more space on smaller screens */
-        max-width: 300px; /* Further limit max size */
+        width: 100% !important /* Make videos take up more space on smaller screens */
+        max-width: 500px; /* Further limit max size */
     }
 }
 
