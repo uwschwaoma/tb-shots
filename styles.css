@@ -450,9 +450,8 @@ footer p {
 /* Fix Modal Video Display for Miscellaneous Section */
 #miscellaneous .modal-content {
   display: block;
-  margin: auto;
   width: 90vw; /* Adjust width to fit viewport */
-  max-width: 900px; /* Prevents excessive scaling */
+  max-width: 1200px; /* Prevents excessive scaling */
   height: auto; /* Maintain aspect ratio */
   max-height: 90vh; /* Ensure video fits within viewport height */
   object-fit: contain; /* Prevents cropping */
@@ -479,8 +478,31 @@ footer p {
   width: 100%;
   height: auto;
   max-height: 90vh; /* Prevents overflow */
-  max-width: 100%;
   object-fit: contain; /* Makes sure entire video is visible */
+}
+
+/* Close Button Styling */
+#miscellaneous .modal .close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#miscellaneous .modal .close:hover {
+  color: #bb86fc; /* Matches your theme */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  #miscellaneous .modal-content {
+    width: 95vw;
+    max-width: 100%;
+  }
 }
 
 /* Responsive Adjustments */
