@@ -424,25 +424,16 @@ footer p {
 }
 
 #miscellaneous .gallery .gallery-item {
-    flex: 1 1 auto; /* Prevents forced size */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 600 px;
-}
-
-#miscellaneous .gallery .gallery-item {
-    width: auto;  /* Matches video width */
-    max-width: 600px; /* Optional: Controls max size */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    width: auto;
+    max-width: 600px;
+    text-align: center;        
 }
 
 #miscellaneous .gallery .gallery-item video {
     width: 100%; /* Ensures video fills container */
     height: auto; /* Maintains aspect ratio */
-    max-width: 600px; /* Keeps videos consistent in size */
+    display: block; 
 }
 
 /* Modal container (hidden by default) */
