@@ -410,7 +410,7 @@ footer p {
     padding: 20px;
     max-width: 1200px; /* Keeps gallery at a good width */
     margin: 0 auto; /* Centers gallery on the page */
-    align-items: flex-start;
+    align-items: center;
 }
 
 /* Standardizing Video Size */
@@ -426,19 +426,19 @@ footer p {
 
 #miscellaneous .gallery .gallery-item {
     display: inline-block; /* Allows dynamic resizing */
-    flex-direction: column; /* Keeps videos stacked */
-    align-items: center; /* Centers video within its box */
-    width: 100%; /* Makes box fit the video's natural size */
-    max-width: 600px;
+    width: fit-content; /* Makes box fit the video's natural size */
+    margin: 0;
     padding: 0;
     text-align: center;
 }
 
 #miscellaneous .gallery .gallery-item video {
-    width: 100%; /* Ensures video fills container */
+    display: block; /* Prevents extra spacing below */
+    width: 100%; /* Makes sure video fully fills the container */
     height: auto; /* Maintains aspect ratio */
-    display: block; 
-    max-width: 600px;
+    aspect-ratio: 16 / 9; /* Ensures video keeps correct proportions */
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Modal container (hidden by default) */
