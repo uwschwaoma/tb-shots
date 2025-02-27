@@ -406,7 +406,7 @@ footer p {
     display: flex; /* Aligns videos in a row */
     flex-wrap: wrap; /* Ensures responsiveness */
     justify-content: center; /* Centers videos */
-    gap: 15px; /* Adds even spacing */
+    gap: 20px; /* Adds even spacing */
     padding: 10px;
     max-width: 100%; /* Keeps gallery at a good width */
     margin: 0 auto; /* Centers gallery on the page */
@@ -436,37 +436,12 @@ footer p {
 
 #miscellaneous .gallery .gallery-item video {
     display: block; /* Removes extra inline spacing */
-    width: 60%; /* Makes sure it fully fills the container */
+    width: 100%; /* Makes sure it fully fills the container */
     max-width: 400px; /* Prevents artificial constraints */
     height: auto; /* Maintains aspect ratio */
-    aspect-ratio: auto; /* Uses the video’s native aspect ratio */
+    aspect-ratio: 16 / 9; /* Uses the video’s native aspect ratio */
     border-radius: 10px; /* Removes any rounding */
-    object-fit: cover;
-}
-
-
-/* Automatically Adjust Large 16:9 Videos */
-@media (min-aspect-ratio: 16/9) {
-    #miscellaneous .gallery .gallery-item video {
-        width: 50%; /* Makes horizontal videos smaller */
-        max-width: 350px; /* Prevents excessive size */
-    }
-}
-
-/* Automatically Adjust Tall 9:16 Vertical Videos */
-@media (max-aspect-ratio: 9/16) {
-    #miscellaneous .gallery .gallery-item video {
-        width: 30%; /* Makes vertical videos smaller */
-        max-width: 250px; /* Prevents excessive size */
-    }
-}
-
-/* Responsive: Reduce Video Size for Small Screens */
-@media (max-width: 768px) {
-    #miscellaneous .gallery .gallery-item video {
-        width: 80%; /* Makes videos fit smaller screens */
-        max-width: 300px; /* Keeps them smaller */
-    }
+    margin: 0 auto;
 }
 
 /* Modal container (hidden by default) */
@@ -552,4 +527,3 @@ footer p {
 .close:focus {
   color: #bbb;
 }
-
