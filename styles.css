@@ -403,24 +403,21 @@ footer p {
 }
 /* Fix for Miscellaneous Video Gallery */
 #miscellaneous .gallery {
-    display: flex; /* Aligns videos in a row */
-    flex-wrap: nowrap; /* Prevents wrapping to next line */
-    justify-content: flex-start; /* Align videos to the left */
-    overflow-x: auto; /* Enables horizontal scrolling */
-    white-space: nowrap; /* Keeps everything in one line */
-    gap: 15px; /* Adds space between videos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit 4 videos per row */
+    gap: 15px; /* Space between videos */
     padding: 10px 0;
-    max-width: 100%; /* Keeps gallery at full width */
-    margin: 0 auto; /* Centers gallery */
-    align-items: center;
+    max-width: 100%; /* Keep full width */
+    margin: 0 auto; /* Center the gallery */
+    overflow-x: auto; /* Horizontal scrolling */
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* For Firefox */
 }
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
-     width: 22%; /* Reduce size slightly */
-    max-width: 280px; /* Ensures videos are not too large */
+    width: 100%; /* Reduce size slightly */
+    max-width: 250px; /* Ensures videos are not too large */
     height: auto; /* Maintain aspect ratio */
     aspect-ratio: 16 / 9; /* Keeps the correct shape */
     border-radius: 10px;
@@ -453,17 +450,25 @@ footer p {
     padding: 0;
 }
 
+/* Limit 3 videos per row on medium screens */
 @media screen and (max-width: 1024px) {
+    #miscellaneous .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+    }
     #miscellaneous .gallery video {
-        width: 30%; /* Make videos take up more space on smaller screens */
-        max-width: 240px; /* Further limit max size */
+        max-width: 220px; /* Slightly smaller */
     }
 }
 
+/* Limit 2 videos per row on smaller screens */
 @media screen and (max-width: 768px) {
+    #miscellaneous .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+    }
     #miscellaneous .gallery video {
-        width: 40%; /* Make videos smaller on mobile */
-        max-width: 200px;
+        max-width: 200px; /* Smaller for mobile */
+    }
+}
 
 /* Make scrollbar visible but minimal */
 #miscellaneous .gallery::-webkit-scrollbar {
