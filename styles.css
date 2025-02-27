@@ -435,6 +435,15 @@ footer p {
     object-fit: cover;
 }
 
+/* Target only the last two videos with a 16:9 aspect ratio of the last row */
+#miscellaneous .gallery video:nth-last-of-type(2),
+#miscellaneous .gallery video:nth-last-of-type(1) {
+    aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
+    width: 150%;  /* Increase size */
+    height: auto;
+    grid-column: span 2; /* Make them take up more space */
+}
+
 #miscellaneous .gallery .gallery-item {
     display: flex; /* Ensures the container only wraps around the video */ 
     justify-content: center;
