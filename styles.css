@@ -404,24 +404,29 @@ footer p {
 /* Fix for Miscellaneous Video Gallery */
 #miscellaneous .gallery {
     display: flex; /* Aligns videos in a row */
-    flex-wrap: wrap; /* Ensures responsiveness */
-    justify-content: center; /* Centers videos */
-    gap: 0; /* Adds even spacing */
-    padding: 0;
-    max-width: 100%; /* Keeps gallery at a good width */
-    margin: 0 auto; /* Centers gallery on the page */
+    flex-wrap: nowrap; /* Prevents wrapping to next line */
+    justify-content: flex-start; /* Align videos to the left */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Keeps everything in one line */
+    gap: 15px; /* Adds space between videos */
+    padding: 10px 0;
+    max-width: 100%; /* Keeps gallery at full width */
+    margin: 0 auto; /* Centers gallery */
     align-items: center;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* For Firefox */
 }
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
-    width: 20%;
-    max-width: 220px;
-    height: auto; /* Ensures aspect ratio is maintained */
-    aspect-ratio: 16 / 9; /* Keeps the video shape */
+     width: 22%; /* Reduce size slightly */
+    max-width: 280px; /* Ensures videos are not too large */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* Keeps the correct shape */
     border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     display: block;
+    object-fit: contain;
 }
 
 #miscellaneous .gallery .gallery-item {
@@ -448,11 +453,26 @@ footer p {
     padding: 0;
 }
 
+@media screen and (max-width: 1024px) {
+    #miscellaneous .gallery video {
+        width: 30%; /* Make videos take up more space on smaller screens */
+        max-width: 240px; /* Further limit max size */
+    }
+}
+
 @media screen and (max-width: 768px) {
     #miscellaneous .gallery video {
-        width: 50%; /* Make videos take up more space on smaller screens */
-        max-width: 180px; /* Further limit max size */
-    }
+        width: 40%; /* Make videos smaller on mobile */
+        max-width: 200px;
+
+/* Make scrollbar visible but minimal */
+#miscellaneous .gallery::-webkit-scrollbar {
+    height: 6px; /* Adjust scrollbar thickness */
+}
+
+#miscellaneous .gallery::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Style scrollbar */
+    border-radius: 5px;
 }
 
 /* Modal container (hidden by default) */
