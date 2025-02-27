@@ -689,12 +689,3 @@ video {
   text-decoration: none;
   cursor: pointer;
 }
-
-/* Target only the last two videos inside the miscellaneous gallery */
-#miscellaneous .gallery video:nth-last-of-type(2),
-#miscellaneous .gallery video:nth-last-of-type(1) {
-    aspect-ratio: 16 / 9; /* Ensure correct aspect ratio */
-    width: 100%;  /* Make sure they fill their grid space */
-    height: auto;
-    grid-column: span 2; /* Make them span across two columns */
-}
