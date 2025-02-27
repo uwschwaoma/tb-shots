@@ -404,26 +404,23 @@ footer p {
 /* Fix for Miscellaneous Video Gallery */
 #miscellaneous .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit 4 videos per row */
+    grid-template-columns: repeat(5, 1fr); /* Auto-fit 4 videos per row */
     gap: 15px; /* Space between videos */
-    padding: 10px 0;
-    max-width: 100%; /* Keep full width */
+    padding: 20px 0;
+    max-width: 1200px; /* Keep full width */
     margin: 0 auto; /* Center the gallery */
-    overflow-x: auto; /* Horizontal scrolling */
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* For Firefox */
 }
+    
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
     width: 100%; /* Reduce size slightly */
-    max-width: 250px; /* Ensures videos are not too large */
     height: auto; /* Maintain aspect ratio */
     aspect-ratio: 16 / 9; /* Keeps the correct shape */
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     display: block;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 #miscellaneous .gallery .gallery-item {
@@ -450,23 +447,28 @@ footer p {
     padding: 0;
 }
 
-/* Limit 3 videos per row on medium screens */
-@media screen and (max-width: 1024px) {
+/* Responsive Adjustments */
+@media screen and (max-width: 1200px) {
     #miscellaneous .gallery {
-        grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
-    }
-    #miscellaneous .gallery video {
-        max-width: 220px; /* Slightly smaller */
+        grid-template-columns: repeat(4, 1fr); /* 4 videos per row for medium screens */
     }
 }
 
-/* Limit 2 videos per row on smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     #miscellaneous .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+        grid-template-columns: repeat(3, 1fr); /* 3 videos per row for smaller screens */
     }
-    #miscellaneous .gallery video {
-        max-width: 200px; /* Smaller for mobile */
+}
+
+@media screen and (max-width: 600px) {
+    #miscellaneous .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 videos per row for mobile */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #miscellaneous .gallery {
+        grid-template-columns: repeat(1, 1fr); /* 1 video per row for very small screens */
     }
 }
 
