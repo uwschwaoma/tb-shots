@@ -419,10 +419,7 @@ footer p {
     height: auto; /* Ensures aspect ratio is maintained */
     aspect-ratio: 16 / 9; /* Keeps the video shape */
     border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* changes 2/26/2025 */
-    object-fit: contain; 
-    height: 337px; 
-    background-color: black;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 #miscellaneous .gallery .gallery-item {
@@ -430,47 +427,6 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 600px; /* changes 2/26/2025 */
-    height: auto; 
-    padding: 0;
-    margin: 0;
-}
-/* 2/26/2025 */
-.video-container {
-    display: flex;
-    align-items: center;
-    width: auto; /* Ensures it doesn't shrink */
-    height: auto;
-    overflow: hidden;
-}
-
-/* 2/26/205 */
-.video-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    overflow: hidden; /* Ensures no extra space */
-}
-
-/* 2/26/25 */
-.video-wrapper video {
-  object-fit: cover; /* Ensures full visibility */
-}
-
-.video-container, 
-.video-wrapper, 
-.video-container video {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 auto;
-    display: block;
-}
-
-.video-wrapper video {
-    object-fit: cover; /* or remove it if not needed */
 }
 
 /* Modal container (hidden by default) */
@@ -556,5 +512,4 @@ footer p {
 .close:focus {
   color: #bbb;
 }
-
 
