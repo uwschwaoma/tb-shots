@@ -432,6 +432,17 @@ footer p {
     max-width: 600px; /* changes 2/26/2025 */
     height: auto; 
 }
+/* 2/26/2025 */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* Matches the exact size of the video */
+    height: fit-content;
+    max-width: 100%; /* Prevents overflow */
+    max-height: 100%;
+    margin: auto;
+}
 
 /* Modal container (hidden by default) */
 .modal {
