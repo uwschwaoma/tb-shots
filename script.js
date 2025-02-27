@@ -1,5 +1,5 @@
 document.getElementById('bookingForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+  event.preventDefault(); // Prevent the default form submission
 
   fetch(this.action, {
     method: 'POST',
@@ -7,16 +7,18 @@ document.getElementById('bookingForm').addEventListener('submit', function(event
     headers: {
       'Accept': 'application/json'
     }
-  }).then(response => {
-    if (response.ok) {
-      showPopup('Thank you for your submission! We will get back to you soon.');
-      this.reset();
-    } else {
+  })
+    .then(response => {
+      if (response.ok) {
+        showPopup('Thank you for your submission! We will get back to you soon.');
+        this.reset(); // Reset the form fields
+      } else {
+        showPopup('Oops! There was a problem submitting your form.');
+      }
+    })
+    .catch(error => {
       showPopup('Oops! There was a problem submitting your form.');
-    }
-  }).catch(error => {
-    showPopup('Oops! There was a problem submitting your form.');
-  });
+    });
 });
 
 function showPopup(message) {
