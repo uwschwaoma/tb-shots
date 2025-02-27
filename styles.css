@@ -432,6 +432,8 @@ footer p {
     align-items: center;
     max-width: 600px; /* changes 2/26/2025 */
     height: auto; 
+    padding: 0;
+    margin: 0;
 }
 /* 2/26/2025 */
 .video-container {
@@ -458,6 +460,20 @@ footer p {
     height: auto;
     max-height: 100%; /* Prevents overflow */
     object-fit: scale-down; /* Ensures full visibility */
+}
+
+.video-container, 
+.video-wrapper, 
+.video-container video {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 auto;
+    display: block;
+}
+
+.video-wrapper video {
+    object-fit: cover; /* or remove it if not needed */
 }
 
 /* Modal container (hidden by default) */
