@@ -410,6 +410,7 @@ footer p {
     padding: 20px;
     max-width: 1200px; /* Keeps gallery at a good width */
     margin: 0 auto; /* Centers gallery on the page */
+    align-items: flex-start;
 }
 
 /* Standardizing Video Size */
@@ -423,16 +424,18 @@ footer p {
 }
 
 #miscellaneous .gallery .gallery-item {
-    display: inline-block;
-    width: auto;
+    display: flex;
+    width: fit-content;
     max-width: 600px;
-    text-align: center;        
+    text-align: center;
+    flex-direction: column;
 }
 
 #miscellaneous .gallery .gallery-item video {
     width: 100%; /* Ensures video fills container */
     height: auto; /* Maintains aspect ratio */
     display: block; 
+    max-width: 600px;
 }
 
 /* Modal container (hidden by default) */
