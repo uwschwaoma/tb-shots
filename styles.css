@@ -407,21 +407,23 @@ footer p {
     flex-wrap: wrap; /* Ensures responsiveness */
     justify-content: center; /* Centers videos */
     gap: 0; /* Adds even spacing */
-    padding: 0;
+    padding: 10px 0;
     max-width: 100%; /* Keeps gallery at a good width */
     margin: 0 auto; /* Centers gallery on the page */
     align-items: center;
+    overflow: hidden;
 }
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
-    width: 15%;
-    max-width: 150px;
+    width: 8%;
+    max-width: 100px;
     height: auto; /* Ensures aspect ratio is maintained */
     aspect-ratio: 16 / 9; /* Keeps the video shape */
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  
     display: block;
+    object-fit: contain;
 }
 
 #miscellaneous .gallery .gallery-item {
@@ -450,8 +452,8 @@ footer p {
 
 @media screen and (max-width: 768px) {
     #miscellaneous .gallery video {
-        width: 40%; /* Make videos take up more space on smaller screens */
-        max-width: 120px; /* Further limit max size */
+        width: 25%; /* Make videos take up more space on smaller screens */
+        max-width: 80px; /* Further limit max size */
     }
 }
 
