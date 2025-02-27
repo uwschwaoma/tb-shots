@@ -416,14 +416,14 @@ footer p {
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
-    width: 8%;
-    max-width: 100px;
-    height: auto; /* Ensures aspect ratio is maintained */
-    aspect-ratio: 16 / 9; /* Keeps the video shape */
-    border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  
-    display: block;
-    object-fit: contain;
+   width: 100px !important;  /* Force max width */
+    height: 56px !important;  /* Maintain 16:9 aspect ratio */
+    max-width: 100px !important; /* Hard limit */
+    max-height: 56px !important;
+    object-fit: contain !important; /* Prevent cropping */
+    border-radius: 10px !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2) !important;
+    display: block !important;
 }
 
 #miscellaneous .gallery .gallery-item {
