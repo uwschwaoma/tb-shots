@@ -59,11 +59,20 @@ nav ul li.dropdown .dropdown-content {
     text-align: center; /* Center all content inside */
 }
 
-.best-work h2 {
+/*.best-work h2 {
     text-align: center;
     width: 100%;
     margin: 0 auto; /* Ensures it stays centered */
-    display: block;
+    /* display: block; 
+} 
+*/
+.best-work h2 {
+    font-size: 48px; /* Increases the font size */
+    font-weight: bold;
+    margin-top: 40px; /* Adds more space between the text and the background image */
+    padding-top: 20px; /* Extra padding for better spacing */
+    text-transform: uppercase; /* Optional: Makes the text all uppercase */
+    letter-spacing: 2px; /* Adds more space between letters */
 }
 
 /* Prevent background from overlapping dropdown */
