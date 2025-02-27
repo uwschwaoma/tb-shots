@@ -447,39 +447,80 @@ footer p {
     padding: 0;
 }
 
-/* Ensure Modal Covers Entire Screen Properly */
+/* Fix Full-Screen Video Display for Miscellaneous Section */
 #miscellaneous .modal {
   display: none;
   position: fixed;
-  z-index: 10000; /* Ensures modal stays on top */
+  z-index: 10000; /* Ensures modal is always on top */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  overflow: hidden; /* Prevents extra scrolling */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Ensures Video Fully Fits Inside Modal Without Getting Cut Off */
+/* Ensures Video Stretches Properly Without Getting Cut Off */
 #miscellaneous .modal-content {
-  display: block;
-  width: 90vw; /* Adjust width to fit viewport */
-  max-width: 1200px; /* Prevent excessive scaling */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 90vh; /* Ensure video fits within viewport height */
-  object-fit: contain; /* Ensures entire video is visible */
-  overflow: hidden; /* Prevents any clipping */
+  width: 90vw;
+  height: 90vh;
+  max-width: 1200px;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Ensure the Video Expands Fully Inside the Modal */
+/* General Video Styles - Covers both 16:9 and 9:16 */
 #miscellaneous .modal video {
-  width: 100%;
+  width: auto;
   height: auto;
-  max-height: 90vh; /* Ensures video is not cropped */
-  object-fit: contain; /* Prevents parts of the video from being cut off */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures no cropping */
+}
+
+/* Special Fix for Vertical (9:16) Videos */
+#miscellaneous .modal video[style*="aspect-ratio: 9/16"] {
+  height: 90vh; /* Ensures full height display */
+  width: auto; /* Prevents stretching */
+  max-width: 50vw; /* Keeps width reasonable */
+  object-fit: contain;
+}
+
+/* Special Fix for Landscape (16:9) Videos */
+#miscellaneous .modal video[style*="aspect-ratio: 16/9"] {
+  width: 90vw; /* Ensures full width display */
+  height: auto;
+  max-height: 90vh; /* Prevents overflow */
+  object-fit: contain;
+}
+
+/* Ensure Full-Screen Works Correctly Across Browsers */
+video:-webkit-full-screen { 
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+video:-moz-full-screen { 
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+video:-ms-fullscreen { 
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+video:fullscreen {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Close Button Styling */
@@ -496,14 +537,6 @@ footer p {
 
 #miscellaneous .modal .close:hover {
   color: #bb86fc; /* Matches your theme */
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  #miscellaneous .modal-content {
-    width: 95vw;
-    max-width: 100%;
-  }
 }
 
 /* Responsive Adjustments */
