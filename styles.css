@@ -447,6 +447,42 @@ footer p {
     padding: 0;
 }
 
+/* Fix Modal Video Display for Miscellaneous Section */
+#miscellaneous .modal-content {
+  display: block;
+  margin: auto;
+  width: 90vw; /* Adjust width to fit viewport */
+  max-width: 900px; /* Prevents excessive scaling */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 90vh; /* Ensure video fits within viewport height */
+  object-fit: contain; /* Prevents cropping */
+}
+
+/* Ensure Modal Background Covers Entire Screen */
+#miscellaneous .modal {
+  display: none;
+  position: fixed;
+  z-index: 10000; /* Ensures modal is on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure the video inside modal scales properly */
+#miscellaneous .modal video {
+  width: 100%;
+  height: auto;
+  max-height: 90vh; /* Prevents overflow */
+  max-width: 100%;
+  object-fit: contain; /* Makes sure entire video is visible */
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 1200px) {
     #miscellaneous .gallery {
