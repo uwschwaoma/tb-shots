@@ -689,10 +689,3 @@ video {
   text-decoration: none;
   cursor: pointer;
 }
-
-/* To line up the last vids with the rows */
-#miscellaneous .gallery video:nth-last-child(-n+2) { /* Targets last two videos */
-    grid-column: span 2; /* Makes the videos take up more width */
-    width: 150%; /* Increase size */
-    height: auto;
-}
