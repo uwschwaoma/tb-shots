@@ -415,8 +415,8 @@ footer p {
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
-    width: 20%;
-    max-width: 220px;
+    width: 15%;
+    max-width: 150px;
     height: auto; /* Ensures aspect ratio is maintained */
     aspect-ratio: 16 / 9; /* Keeps the video shape */
     border-radius: 10px;
@@ -450,8 +450,8 @@ footer p {
 
 @media screen and (max-width: 768px) {
     #miscellaneous .gallery video {
-        width: 50%; /* Make videos take up more space on smaller screens */
-        max-width: 180px; /* Further limit max size */
+        width: 40%; /* Make videos take up more space on smaller screens */
+        max-width: 120px; /* Further limit max size */
     }
 }
 
