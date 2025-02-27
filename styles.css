@@ -419,9 +419,10 @@ footer p {
     height: auto; /* Ensures aspect ratio is maintained */
     aspect-ratio: 16 / 9; /* Keeps the video shape */
     border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    object-fit: scale-down; /* changes 2/26/2025 */
-    /*max-height: 337px; */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* changes 2/26/2025 */
+    object-fit: contain; 
+    height: 337px; 
+    background-color: black;
 }
 
 #miscellaneous .gallery .gallery-item {
