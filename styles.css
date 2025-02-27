@@ -456,10 +456,7 @@ footer p {
 
 /* 2/26/25 */
 .video-wrapper video {
-    width: 100%;
-    height: auto;
-    max-height: 100%; /* Prevents overflow */
-    object-fit: scale-down; /* Ensures full visibility */
+  object-fit: cover; /* Ensures full visibility */
 }
 
 .video-container, 
