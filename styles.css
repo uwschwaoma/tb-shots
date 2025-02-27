@@ -1,4 +1,4 @@
-/* General Styles */
+add this to this /* General Styles */
 body {
   font-family: 'Calisto MT', serif; /* Fixed font-family syntax */
   margin: 0;
@@ -437,7 +437,7 @@ footer p {
 #miscellaneous .gallery .gallery-item video {
     display: block; /* Removes extra inline spacing */
     width: 100%; /* Makes sure it fully fills the container */
-    max-width: none; /* Prevents artificial constraints */
+    max-width: 400px; /* Prevents artificial constraints */
     height: auto; /* Maintains aspect ratio */
     aspect-ratio: 16 / 9; /* Uses the video’s native aspect ratio */
     border-radius: 10px; /* Removes any rounding */
