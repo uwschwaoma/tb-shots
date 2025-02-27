@@ -425,23 +425,28 @@ footer p {
 }
 
 #miscellaneous .gallery .gallery-item {
-    display: inline-flex; /* Ensures the container only wraps around the video */
+    display: flex; /* Ensures the container only wraps around the video */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: auto; /* Matches video width exactly */
-    text-align: center;
+    height: auto;
     padding: 0;
     margin: 0;
+    background: none;
+    border: none;
 }
 
 #miscellaneous .gallery .gallery-item video {
     display: block; /* Prevents extra spacing below */
     width: 100%; /* Makes sure video fully fills the container */
+    max-width: 100%
     height: auto; /* Maintains aspect ratio */
-    aspect-ratio: 16 / 9; /* Ensures video keeps correct proportions */
-    border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 9 / 16; /* Ensures video keeps correct proportions */
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Modal container (hidden by default) */
