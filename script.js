@@ -1,37 +1,42 @@
-document.getElementById('bookingForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
-
-  fetch(this.action, {
-    method: 'POST',
-    body: new FormData(this),
-    headers: {
-      'Accept': 'application/json'
-    }
-  })
-    .then(response => {
-      if (response.ok) {
-        showPopup('Thank you for your submission! We will get back to you soon.');
-        this.reset(); // Reset the form fields
-      } else {
-        showPopup('Oops! There was a problem submitting your form.');
-      }
-    })
-    .catch(error => {
-      showPopup('Oops! There was a problem submitting your form.');
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("bookingForm");
+    const popup = document.getElementById("customPopup");
+    const popupMessage = document.getElementById("popupMessage");
+    const closeBtn = document.querySelector(".close");
+    
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        const formData = new FormData(form);
+        
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                popupMessage.textContent = "Booking submitted successfully!";
+                popup.style.display = "flex";
+                form.reset();
+            } else {
+                popupMessage.textContent = "Something went wrong. Please try again.";
+                popup.style.display = "flex";
+            }
+        }).catch(error => {
+            popupMessage.textContent = "Error submitting form. Please check your connection.";
+            popup.style.display = "flex";
+        });
     });
-});
-
-function showPopup(message) {
-  document.getElementById('popupMessage').textContent = message;
-  document.getElementById('customPopup').style.display = 'block';
-}
-
-document.querySelector('.close').addEventListener('click', function() {
-  document.getElementById('customPopup').style.display = 'none';
-});
-
-window.addEventListener('click', function(event) {
-  if (event.target === document.getElementById('customPopup')) {
-    document.getElementById('customPopup').style.display = 'none';
-  }
+    
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
+    });
+    
+    window.addEventListener("click", function (event) {
+        if (event.target === popup) {
+            popup.style.display = "none";
+        }
+    });
 });
