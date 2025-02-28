@@ -581,24 +581,6 @@ video {
     border-radius: 5px;
 }
 
-/* Zoom Animation */
-@keyframes zoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #ffffff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
 /* Popup Styling */
 .modal {
     display: none;
@@ -635,6 +617,7 @@ video {
 .close:hover {
     color: #bbb;
 }
+
 
 
 
