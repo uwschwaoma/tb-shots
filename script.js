@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("customPopup");
     const popupMessage = document.getElementById("popupMessage");
     const closeBtn = document.querySelector(".close");
-    
+
+    // Prevent default form submission and handle via JavaScript
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
-        
+
         const formData = new FormData(form);
-        
+
+        // Make a fetch request to submit the form data
         fetch(form.action, {
             method: form.method,
             body: formData,
@@ -29,11 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
             popup.style.display = "flex";
         });
     });
-    
+
+    // Close the popup when the close button is clicked
     closeBtn.addEventListener("click", function () {
         popup.style.display = "none";
     });
-    
+
+    // Close the popup when clicking outside of it
     window.addEventListener("click", function (event) {
         if (event.target === popup) {
             popup.style.display = "none";
