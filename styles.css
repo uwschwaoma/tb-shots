@@ -581,67 +581,6 @@ video {
     border-radius: 5px;
 }
 
-/* Modal container (hidden by default) */
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.9); 
-}
-
-/* Modal image styling */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* Caption text (optional) */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-}
-
-/* Zoom animation */
-.modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1; /* On top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
-}
-
-/* Modal Content (the enlarged image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 60%;
-  max-width: 500px;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
 /* Zoom Animation */
 @keyframes zoom {
   from {transform: scale(0)}
@@ -660,8 +599,8 @@ video {
   transition: color 0.3s;
 }
 
-/* Popup Modal Styling */
-#customPopup {
+/* Popup Styling */
+.modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -669,30 +608,33 @@ video {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #2a0a4a, #000);
+    background: linear-gradient(135deg, #1a1a2e, #3a0ca3);
     color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     width: 300px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    font-family: 'Poppins', sans-serif;
 }
 
 .close {
     color: white;
     float: right;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
 
 .close:hover {
-    color: #d4a1ff;
+    color: #bbb;
 }
+
+
 
