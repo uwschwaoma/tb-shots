@@ -59,6 +59,13 @@ nav ul li.dropdown .dropdown-content {
     text-align: center; /* Center all content inside */
 }
 
+/*.best-work h2 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; /* Ensures it stays centered */
+    /* display: block; 
+} 
+*/
 .best-work h2 {
     font-size: 32px; /* Increases the font size */
     font-weight: bold;
@@ -303,89 +310,26 @@ nav ul li a:hover {
   margin-top: 20px;
 }
 
-/* Popup Styles */
-#customPopup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 150px;
-  background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.modal-content {
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+/* About Me Section */
+.about-section {
+  padding: 40px 20px;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px;
 }
 
-.close {
-  color: white;
-  font-size: 24px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
+.about-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-    text-align: center;
-  }
-
-  header .logo img {
-    height: 80px;
-    margin-bottom: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  nav ul li {
-    margin: 0;
-    padding: 0;
-  }
-
-  .home-section .background-image img {
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .home-section h1 {
-    font-size: 40px;
-  }
-
-  .home-section p {
-    font-size: 16px;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-
-  .booking-section form {
-    max-width: 100%;
-  }
-
-  .about-section p {
-    font-size: 16px;
-  }
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Footer Section */
@@ -404,6 +348,7 @@ footer p {
   font-size: 16px;
   margin: 10px 0 0;
 }
+
 
 /* Gallery container */
 .gallery {
@@ -439,6 +384,8 @@ footer p {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
+
 
 /* Description Styles */
 .description {
@@ -476,7 +423,6 @@ footer p {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
 /* Fix for Miscellaneous Video Gallery */
 #miscellaneous .gallery {
     display: grid;
@@ -486,6 +432,7 @@ footer p {
     max-width: 1200px; /* Keep full width */
     margin: 0 auto; /* Center the gallery */
 }
+
 
 /* Standardizing Video Size */
 #miscellaneous .gallery video {
@@ -632,4 +579,123 @@ video {
 #miscellaneous .gallery::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.5); /* Style scrollbar */
     border-radius: 5px;
+}
+
+/* Modal container (hidden by default) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+/* Modal image styling */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption text (optional) */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+/* Zoom animation */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* On top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+/* Modal Content (the enlarged image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 60%;
+  max-width: 500px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+/* Zoom Animation */
+@keyframes zoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
