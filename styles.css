@@ -151,15 +151,17 @@ nav ul li a:hover {
   color: #bb86fc; /* Purple hover effect */
 }
 
-/* Home Section */
+/* Home Section Background */
 .home-section .background-image {
   position: relative;
-  text-align: center;
-}
-
-.home-section .background-image img {
   width: 100%;
-  height: auto;
+  height: 400px; /* Adjust as needed */
+  background: url('background.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .home-section .logo-overlay {
@@ -698,4 +700,46 @@ video {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Overlay Text Styling */
+.home-section .logo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 90%; /* Prevents text from stretching too wide */
+  max-width: 600px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3); /* Subtle dark background for readability */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Heading (TB SHOTS) */
+.home-section .logo-overlay h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 4rem); /* Responsive font */
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+/* Subtitle (Providing professional photography...) */
+.home-section .logo-overlay p {
+  font-size: clamp(1rem, 3vw, 1.5rem); /* Responsive text */
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* Tagline (Drive the Memory, Capture the Moment) */
+.home-section .tagline {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Makes text scale properly */
+  font-style: italic;
 }
