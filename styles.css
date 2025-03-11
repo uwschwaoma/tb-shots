@@ -636,8 +636,8 @@ video {
 .modal-content {
   margin: auto;
   display: block;
-  width: 60%;
-  max-width: 500px;
+  width: 80%;
+  max-width: 700px;
   animation-name: zoom;
   animation-duration: 0.6s;
 }
@@ -664,6 +664,7 @@ video {
 .close:focus {
   color: #bbb;
 }
+
 .modal {
   display: none;
   position: fixed;
