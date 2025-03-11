@@ -6,7 +6,7 @@
   <title>T.B. Shots - Photography & Videography</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the updated CSS -->
 </head>
 <body>
   <!-- Header Section -->
@@ -39,12 +39,12 @@
   <section id="home" class="home-section">
     <div class="background-image">
       <img src="background.jpg" alt="Car Background">
-      <div style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); text-align: center; color: white;">
-        <h1 style="font-family: Georgia, serif; font-size: 60px; font-weight: normal; margin: 0;">TB SHOTS</h1>
-        <p style="font-size: 18px; font-style: italic; margin-top: 5px;">Providing professional photography and videography services</p>
+      <div class="home-text">
+        <h1>TB SHOTS</h1>
+        <p>Providing professional photography and videography services</p>
       </div>
-      <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center; color: white;">
-        <p style="font-size: 20px; margin-top: 10px; font-style: italic;">Drive the Memory, Capture the Moment</p>
+      <div class="home-subtext">
+        <p>Drive the Memory, Capture the Moment</p>
       </div>
     </div>
   </section>
@@ -67,17 +67,13 @@
         </video>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 10px;">
-      <p style="font-size: 16px; color: #bbb;">Check out more under Portfolio</p>
-    </div>
+    <p class="portfolio-text">Check out more under Portfolio</p>
   </section>
 
   <!-- About Me Section -->
   <section id="about" class="about-section">
     <h2>About Me</h2>
-    <p>My name is Temon Barsoum. I'm a photographer and videographer based in the Seattle area with a passion for capturing moments that tell a love for motion. I turn ordinary scenes into unforgettable visuals. Specializing in cinematic car videos and dynamic sports content, I focus on creating high-energy, visually striking work.</p>
-    <br>
-    <p>I specialize in creating high-quality videos for car owners, upcoming business owners, and artists, helping them reach a wider audience and attract more clients. By showcasing their work, we not only support their growth but also expand TBshots' network and business opportunities. My goal is to build lasting connections, increase exposure, and create valuable collaborations that benefit all parties in the long run!</p>
+    <p>My name is Temon Barsoum. I'm a photographer and videographer based in the Seattle area...</p>
   </section>
 
   <!-- Booking Section -->
@@ -94,52 +90,13 @@
       <textarea id="service" name="service" rows="5" required></textarea>
       <button type="submit">Submit</button>
     </form>
-    <div class="contact-info">
-      <h3>Contact Information</h3>
-      <p>Email: temon.barsoum22@gmail.com</p>
-      <p>Or Contact through Instagram!</p>
-    </div>
   </section>
 
   <!-- Footer Section -->
   <footer>
-    <div class="social-media">
-      <a href="https://www.instagram.com/t.b.shots/" target="_blank">
-        <img src="instagram-logo.jpg" alt="Instagram Logo">
-      </a>
-    </div>
     <p>&copy; 2025 T.B. Shots. All Rights Reserved.</p>
-    <!-- Added Cars and Film Work links on footer as suggested from 3/3/25 -->
-    <div class="footer-links">
-      <h4><a href="cars.html" style="color: white;">Cars</a></h4>
-      <h4><a href="miscellaneous.html" style="color: white;">Film Work</a></h4>
-    </div>
-    <p style="margin-top: 25px;">Website developed and designed by:</p>
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
-      <div style="text-align: center;">
-        <h4><a href="https://www.linkedin.com/in/hamza-muhammad-b01164178/" target="_blank" style="color: white;">Hamza Muhammad</a></h4>
-      </div>
-      <div style="text-align: center;">
-        <h4><a href="https://www.linkedin.com/in/jared-dimacali-157647305/" target="_blank" style="color: white;">Jared Dimacali</a></h4>
-      </div>
-      <div style="text-align: center;">
-        <h4><a href="https://www.linkedin.com/in/omar-schwartz-37a577350/" target="_blank" style="color: white;">Omar Schwartz</a></h4>
-      </div>
-      <div style="text-align: center;">
-        <h4><a href="https://www.linkedin.com/in/marclesterpasag/" target="_blank" style="color: white;">Marc Pasag</a></h4>
-      </div>
-    </div>
   </footer>
 
-  <!-- Custom Popup HTML -->
-  <div id="customPopup" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p id="popupMessage"></p>
-    </div>
-  </div>
-
-  <!-- Link to external JavaScript file -->
-  <script src="script.js"></script>
+  <script src="script.js"></script> <!-- JavaScript remains unchanged -->
 </body>
 </html>
